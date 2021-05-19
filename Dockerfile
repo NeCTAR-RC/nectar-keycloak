@@ -1,3 +1,3 @@
 FROM jboss/keycloak
 
-ADD themes/nectar /opt/jboss/keycloak/themes/
+ADD themes /opt/jboss/keycloak/themes/
