@@ -1,0 +1,198 @@
+/* Use flex box to push footer to bottom */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/*
+ *  nectar-container is a copy of the regular container from bootstrap
+ *  but renamed to prevent namespace clash
+*/
+.nectar-container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.nectar-container:before, .nectar-container:after {
+  display: table;
+  content: " "; 
+}
+
+.nectar-container:after {
+  clear: both;
+}
+
+@media (min-width: 768px) {
+  .nectar-container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .nectar-container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nectar-container {
+    width: 1170px;
+  }
+}
+
+.bg-dark {
+  background-color: #000 !important;
+}
+
+/* container login used in splash page */
+.login-pf-page {
+  flex: 1;
+}
+
+
+#kc-form-login {
+  display: none;
+}
+
+/*
+ * Nav bar
+ */
+.navbar {
+  font-size: 1.1em;
+}
+
+/*
+ * Footer
+ */
+.footer {
+  font-size: 1.1em;
+  margin-top: 20px;
+  background: #000;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+
+.footer h3::after,
+.footer h4::after {
+  content: "";
+  background: #fff;
+  height: 2px;
+  display: block;
+  margin-top: 10px;
+  max-width: 50px;
+}
+
+.footer-text a {
+  color: #F8B20E;  /* ARDC orange */
+  text-decoration: underline;
+}
+
+.footer-text a:hover,
+.footer-text a:focus {
+  color: #E51875;  /* ARDC pink */
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+  color: #00A2C4;  /* ARDC blue */
+}
+
+/* Alignment of logos in footer */
+.vertical-align {
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical-align > [class^="col-"],
+.vertical-align > [class*=" col-"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* orange */
+#social-aaf {
+	color: #fef4e9;
+	border: solid 1px #da7c0c;
+	background: #f78d1d;
+	background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+	background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+}
+#social-aaf:hover {
+	background: #f47c20;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+	background: -moz-linear-gradient(top,  #f88e11,  #f06015);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+}
+#social-aaf:active {
+	color: #fcd3a5;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
+	background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f47a20', endColorstr='#faa51a');
+}
+
+/* blue */
+#social-tuakiri {
+	color: #d9eef7;
+	border: solid 1px #0076a3;
+	background: #0095cd;
+	background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+	background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+}
+#social-tuakiri:hover {
+	background: #007ead;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+	background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0095cc', endColorstr='#00678e');
+}
+#social-tuakiri:active {
+	color: #80bed6;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0078a5), to(#00adee));
+	background: -moz-linear-gradient(top,  #0078a5,  #00adee);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0078a5', endColorstr='#00adee');
+}
+
+.social-button {
+	display: inline-block;
+	zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
+	*display: inline;
+	vertical-align: baseline;
+	margin: 5px;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.social-button:hover {
+	text-decoration: none;
+}
+.social-button:active {
+	position: relative;
+	top: 1px;
+}

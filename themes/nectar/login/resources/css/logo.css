@@ -16,12 +16,13 @@
  */
 
 .login-pf body {
-    background: url("../img/keycloak-bg.png") no-repeat center center fixed;
+/*    background: url("../img/keycloak-bg.png") no-repeat center center fixed;
     background-size: cover;
-    height: 100%;
+    height: 100%; */
 }
 
-div.kc-logo-text {
+div#kc-header-wrapper {
+    color: transparent; /* Hide text label */
     background-image: url(../img/nectar-logo.svg);
     background-repeat: no-repeat;
     height: 142px;
