@@ -1,0 +1,9 @@
+{
+    "mappers": [
+        {
+            "name": "Full name to username mapper",
+            "fileName": "fullname-to-username-mapper.js",
+            "description": "Mapper to convert a user's full name to a username"
+        }
+    ]
+}
