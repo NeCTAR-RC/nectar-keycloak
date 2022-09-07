@@ -6,7 +6,7 @@ TAG_PREFIX=
 IMAGE_TAG := $(if $(TAG),$(TAG),$(TAG_PREFIX)$(SHA))
 IMAGE=$(REPO)/$(PROJECT):$(IMAGE_TAG)
 BUILDER=docker
-BUILDER_ARGS=
+BUILDER_ARGS=--no-cache
 
 
 build:
