@@ -124,7 +124,10 @@ body {
   justify-content: center;
 }
 
-
+/* Remove extra spacing above provider name in button */
+.kc-social-provider-name {
+    top: 0px;
+}
 
 /* orange */
 #social-aaf {

@@ -1,3 +1,3 @@
-FROM jboss/keycloak:16.1.1
+FROM quay.io/keycloak/keycloak:19.0.1
 
 ADD themes /opt/jboss/keycloak/themes/
