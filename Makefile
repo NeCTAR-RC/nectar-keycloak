@@ -10,6 +10,8 @@ BUILDER_ARGS=--no-cache
 
 
 build:
+	# No scripts required at the moment
+	#cd scripts; zip ../nectar-scripts.jar -r *; cd ..
 	$(BUILDER) build $(BUILDER_ARGS) -t $(IMAGE) .
 
 push:

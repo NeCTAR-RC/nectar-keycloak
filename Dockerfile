@@ -1,9 +1,14 @@
-FROM quay.io/keycloak/keycloak:19.0.1 as builder
+# Build stage
+FROM quay.io/keycloak/keycloak:22.0.1 as builder
 
 ENV KC_HEALTH_ENABLED=true
+ENV KC_METRICS_ENABLED=true
 ENV KC_DB=mariadb
 ENV KC_HTTP_RELATIVE_PATH=/auth
 ENV KC_CACHE_CONFIG_FILE=cache-ispn.xml
+
+# Install custom providers
+#COPY providers/*.jar /opt/keycloak/providers/
 
 # Add Nectar theme
 ADD ./themes/nectar /opt/keycloak/themes/nectar/
@@ -18,9 +23,13 @@ USER keycloak
 RUN /opt/keycloak/bin/kc.sh build && \
     /opt/keycloak/bin/kc.sh show-config
 
-FROM quay.io/keycloak/keycloak:19.0.1
+
+# Run stage
+FROM quay.io/keycloak/keycloak:22.0.1
 COPY --from=builder /opt/keycloak/ /opt/keycloak/
 WORKDIR /opt/keycloak
 
-ENTRYPOINT /opt/keycloak/bin/kc.sh
+# Install custom providers
+#COPY providers/*.jar /opt/keycloak/providers/
 
+ENTRYPOINT /opt/keycloak/bin/kc.sh
