@@ -1,5 +1,5 @@
 # Build stage
-FROM quay.io/keycloak/keycloak:22.0.1 as builder
+FROM quay.io/keycloak/keycloak:22.0.5 as builder
 
 ENV KC_HEALTH_ENABLED=true
 ENV KC_METRICS_ENABLED=true
@@ -7,7 +7,9 @@ ENV KC_DB=mariadb
 ENV KC_HTTP_RELATIVE_PATH=/auth
 ENV KC_CACHE_CONFIG_FILE=cache-ispn.xml
 
-# Install custom providers
+# Install Nectar custom provider
+COPY providers/nectar-scripts.jar /opt/keycloak/providers/nectar-scripts.jar
+# Install any other custom providers
 #COPY providers/*.jar /opt/keycloak/providers/
 
 # Add Nectar theme
@@ -29,7 +31,9 @@ FROM quay.io/keycloak/keycloak:22.0.1
 COPY --from=builder /opt/keycloak/ /opt/keycloak/
 WORKDIR /opt/keycloak
 
-# Install custom providers
+# Install Nectar custom provider
+COPY providers/nectar-scripts.jar /opt/keycloak/providers/nectar-scripts.jar
+# Install any other custom providers
 #COPY providers/*.jar /opt/keycloak/providers/
 
 ENTRYPOINT /opt/keycloak/bin/kc.sh

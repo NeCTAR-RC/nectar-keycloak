@@ -1,0 +1,9 @@
+{
+    "mappers": [
+        {
+            "name": "Nectar User Attributes to Token",
+            "fileName": "attributes-to-token.js",
+            "description": "Map user attribute values to token"
+        }
+    ]
+}

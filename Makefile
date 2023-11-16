@@ -8,13 +8,15 @@ IMAGE=$(REPO)/$(PROJECT):$(IMAGE_TAG)
 BUILDER=docker
 BUILDER_ARGS=--no-cache
 
+zip:
+	@(cd scripts; zip -r ../providers/nectar-scripts.jar *; cd ..)
 
 build:
-	# No scripts required at the moment
-	#cd scripts; zip ../nectar-scripts.jar -r *; cd ..
+	$(MAKE) zip
 	$(BUILDER) build $(BUILDER_ARGS) -t $(IMAGE) .
 
 push:
 	$(BUILDER) push $(IMAGE)
 
-.PHONY: build push
+
+.PHONY: zip build push
