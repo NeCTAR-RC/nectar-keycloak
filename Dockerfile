@@ -27,7 +27,7 @@ RUN /opt/keycloak/bin/kc.sh build && \
 
 
 # Run stage
-FROM quay.io/keycloak/keycloak:22.0.1
+FROM quay.io/keycloak/keycloak:22.0.5
 COPY --from=builder /opt/keycloak/ /opt/keycloak/
 WORKDIR /opt/keycloak
 
