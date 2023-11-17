@@ -35,17 +35,24 @@
  *     https://www.keycloak.org/docs-api/21.0.1/javadocs/org/keycloak/models/KeycloakSession.html
  */
 
-// Attributes to search for
+var attributes = [];
+
+// Add all client roles for the user
+var client = keycloakSession.getContext().getClient();
+client.getRolesStream().forEach(function(roleModel) {
+    if (user.hasRole(roleModel)) {
+        attributes.push(roleModel.getName());
+    }
+});
+
+// Add these given user attributes
 var attrs = ['federation', 'organisation'];
-
-var groups = [];
-
 for each (var k in attrs) {
     var v = user.getFirstAttribute(k);
     if (v) {
         var result = k + ":" + v;
-        groups.push(result);
+        attributes.push(result);
     }
 }
 
-token.setOtherClaims("nectar_attributes", Java.to(groups, "java.lang.String[]"))
+token.setOtherClaims("nectar_attributes", Java.to(attributes, "java.lang.String[]"))
