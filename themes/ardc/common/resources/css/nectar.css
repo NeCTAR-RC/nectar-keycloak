@@ -1,0 +1,82 @@
+/* Use flex box to push footer to bottom */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.bg-dark {
+  background-color: #000 !important;
+}
+
+/* container login used in splash page */
+.main-content {
+  flex: 1;
+}
+
+/*
+ * Nav bar
+ */
+.navbar {
+  font-size: 1.1em;
+}
+
+/*
+ * Footer
+ */
+.footer {
+  font-size: 1.1em;
+  margin-top: 20px;
+  background: #000;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+
+.footer h3::after,
+.footer h4::after {
+  content: "";
+  background: #fff;
+  height: 2px;
+  display: block;
+  margin-top: 10px;
+  max-width: 50px;
+}
+
+.footer-text a {
+  color: #F8B20E;  /* ARDC orange */
+  text-decoration: underline;
+}
+
+.footer-text a:hover,
+.footer-text a:focus {
+  color: #E51875;  /* ARDC pink */
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+  color: #00A2C4;  /* ARDC blue */
+}
+
+/* Alignment of logos in footer */
+.vertical-align {
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical-align > [class^="col-"],
+.vertical-align > [class*=" col-"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

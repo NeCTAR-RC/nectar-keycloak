@@ -1,0 +1,357 @@
+/* Use Figtree Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-family: 'Figtree', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #16161d;
+  /* Use flex box to push footer to bottom */
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+a {
+  color: rgb(142, 72, 155);
+  text-decoration: none;
+}
+
+a:not([class]), a[class=""] {
+  text-decoration: underline;
+}
+
+a:not([class]):hover, a[class=""]:hover {
+  color: #16161d;
+  text-decoration-color: #00A2C4;
+}
+
+input:focus, input.focus, input:focus-visible {
+  outline: none !important;
+  outline-offset: 0 !important;
+}
+
+.login-pf body {
+  background: #ffffff;
+}
+
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+  font-family: 'Figtree', sans-serif;
+  margin-top: 0;
+  margin-bottom: 0.625rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #16161d;
+}
+
+/*
+ *  nectar-container is a copy of the regular container from bootstrap
+ *  but renamed to prevent namespace clash
+*/
+.nectar-container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.nectar-container:before, .nectar-container:after {
+  display: table;
+  content: " "; 
+}
+
+.nectar-container:after {
+  clear: both;
+}
+
+@media (min-width: 768px) {
+  .nectar-container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .nectar-container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nectar-container {
+    width: 1170px;
+  }
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(0* -1);
+  margin-right: calc(1.5rem* -0.5);
+  margin-left: calc(1.5rem* -0.5);
+}
+
+.row>* {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(1.5rem* 0.5);
+  padding-left: calc(1.5rem* 0.5);
+  margin-top: 0;
+}
+
+.col-12, .form-group {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .col-md-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-lg-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+}
+
+.mb-2 {
+    margin-bottom: 0.625rem !important;
+}
+
+.bg-dark {
+  background-color: #000 !important;
+}
+
+ul {
+    margin: 0;
+    padding: 0 0 0 1.125rem;
+}
+
+ul.list-bullet {
+    list-style: none;
+    padding-left: 14px;
+}
+
+ul.list-bullet li {
+    position: relative;
+    padding-left: 20px;
+}
+
+ul.list-bullet li:before {
+    position: absolute;
+    top: 6px;
+    left: 2px;
+    width: 8px;
+    height: 8px;
+    pointer-events: none;
+    content: "";
+    background-color: #F8B20E;
+}
+
+.bg-light {
+    background-color: #f5f5f5;
+}
+
+/* container login used in splash page */
+.login-pf-page {
+  flex: 1;
+}
+
+.card-pf {
+  border: none;
+  background: #f8f7fc;
+  box-shadow: none;
+}
+
+#kc-form-login {
+  display: none;
+}
+
+h1#kc-page-title {
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-top: 30px;
+  font-size: 24px;
+}
+
+/*
+ * Nav bar
+ */
+.navbar {
+  font-size: 1.1em;
+}
+
+/*
+ * Footer
+ */
+#ardc-footer {
+  font-family: 'Figtree', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  display: block;
+  color: #494949;
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: 991px) {
+  #ardc-footer div[class^="col-"] {
+      margin-bottom: 30px;
+  }
+}
+
+#ardc-footer .footer-logos img {
+  margin-bottom: 26px;
+  max-width: 100%;
+}
+
+#ardc-footer .footer-image-description {
+  font-size: 16px;
+  line-height: 16px;
+  width: 62%;
+}
+
+#ardc-footer .footer-heading {
+  font-size: 18px;
+  line-height: 21px;
+  margin: 0 0 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+@media (min-width: 992px) {
+  #ardc-footer .footer-links {
+    padding-left: 7rem;
+  }
+}
+
+/* Footer sign up form */
+.screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}#mc_embed_signup{background:#fff;clear:left;width:600px;max-width:100%;font-size:16px}#mc_embed_signup h2{font-size:18px;line-height:1.2;margin-bottom:15px}#mc_embed_signup button{border:none}#mc_embed_signup form{margin:0}#mc_embed_signup [type=submit],#mc_embed_signup button{transition:250ms ease-in-out;cursor:pointer}#mc_embed_signup .mc-field-group input,#mc_embed_signup .mc-field-group select{border:1px solid #b8b6c7;font-size:16px;height:40px;border-radius:0;padding:8px;background:#fff;color:#767676;display:block;width:100%;font-family:inherit;box-sizing:border-box}.ardc-custom--fields-grid-wrapper{grid-column-gap:2%;grid-row-gap:16px;display:grid;grid-template-columns:1fr;grid-template-rows:repeat(auto-fill,auto);width:100%}#mc_embed_signup .ardc-custom--fields-grid-wrapper>.mc-field-group{grid-column:1/-1;padding-bottom:0}#mc-signup-modal .mc-field-group.input-group .button,#mc_embed_signup .button{margin:14px 0 0;background-color:#f8b20e;box-shadow:inset 0 0 0 1px #f8b20e;font-size:16px;line-height:1;color:#16161d;font-weight:700;padding:10px 28px;letter-spacing:.5px;height:auto;background-repeat:no-repeat;border-radius:4px;background-size:8px 12px;background-position:right 18px center}#mc-signup-modal .mc-field-group.input-group .button:hover,#mc_embed_signup .button:hover{background-image:url("https://ardc.edu.au/wp-content/themes/ardc/images/icons/arrow-right-white.svg");text-decoration:none;padding-right:37px;color:#fff;background-color:#8e489b;box-shadow:inset 0 0 0 1px #8e489b}#mc-signup-modal{display:none;pointer-events:none;position:fixed;background:rgba(0,0,0,.5);top:0;left:0;z-index:100;width:100%;height:100%;overflow:hidden}#mc-signup-modal.active{display:block;pointer-events:auto}#mc-signup-modal .mc-field-group{position:absolute;background-color:#fff;top:44%;left:50%;width:90%;max-height:90vh;transform:translate(-50%,-50%);max-width:778px;box-sizing:border-box;padding:30px;color:#494949}#mc-signup-modal ul{padding:0}#mc-signup-modal li,#mc-signup-modal ul{list-style:none}#mc-signup-modal li{padding:0!important}#mc-signup-modal .mc-field-group input{height:auto;width:auto;margin-right:.25em}#mc-signup-modal .mc-field-group input,#mc-signup-modal .mc-field-group label{display:inline-block;vertical-align:middle}.close-modal{position:absolute;top:0;right:10px;padding:10px;color:#8e489b;background:0 0;border:0;font-size:30px;font-family:inherit}.error-message{display:none;background:#fff9f9;border:1px solid #c02b0a;font-size:14.992px;margin-top:8px;padding:12.992px 24px;color:#c02b0a}#mc-signup-modal.error label,#mc-signup-modal.error p{color:#c02b0a}#mc-signup-modal.error .error-message{display:block}#mc-embedded-subscribe{border:none!important}@media all and (min-width:768px){.ardc-custom--fields-grid-wrapper{grid-template-columns:repeat(12,1fr)}#mc_embed_signup .ardc-custom--fields-grid-wrapper>.mc-field-group{grid-column:span 6}#mc-signup-modal .mc-field-group{padding:80px 70px}}
+
+#ardc-footer .footer-acknowledgement p {
+  margin: 17px 0;
+  color: #676767;
+  font-size: 16px;
+}
+
+#ardc-footer .footer-copyright {
+  padding-top: 18px;
+  padding-bottom: 20px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 14px;
+  color: rgba(32, 32, 32, 0.8);
+}
+
+#ardc-footer .footer-copyright .copyright {
+  margin-right: 10px;
+}
+
+#ardc-footer .footer-copyright a {
+  color: rgba(32, 32, 32, 0.8);
+  text-decoration: none;
+}
+
+#ardc-footer .footer-copyright a.footer-link {
+  border-left: 1px solid rgba(32, 32, 32, 0.8);
+  padding-left: 19px;
+  padding-right: 19px;
+}
+
+.pf-c-button {
+  display: inline-block;
+  padding: 0.625rem 1.75rem;
+  font-family: 'Figtree', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #16161d;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #e5e5e5;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+/* Remove extra spacing above provider name in button */
+.kc-social-provider-name {
+    top: 0px;
+}
+
+.social-button {
+  display: block;
+  box-sizing: border-box;
+  padding: 0.625rem 1.75rem;
+  font-family: 'Figtree', sans-serif;;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out 0s;
+  letter-spacing: 0.5px;
+  color: #16161d;
+  background-color: #F8B20E;
+}
+.social-button:after {
+  position: relative;
+  display: inline-block;
+  content: "";
+  width: 9px;
+  vertical-align: text-top;
+  border: none;
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+.social-button:hover:after {
+  margin-left: 10px;
+  opacity: 1;
+}
+
+#social-aaf {
+	background-color: #f8b20e;
+  color: #16161d;
+  -webkit-box-shadow: inset 0 0 0 1px #f8b20e;
+  box-shadow: inset 0 0 0 1px #f8b20e;
+}
+#social-aaf:hover {
+	background-color: #8e489b;
+  color: #fff;
+  -webkit-box-shadow: inset 0 0 0 1px #8e489b;
+  box-shadow: inset 0 0 0 1px #8e489b;
+}
+#social-aaf:hover:after {
+  content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 37.43 65.51'%3E%3Cg%3E%3Cpath d='m36.06,29.45c1.83,1.83,1.83,4.79,0,6.62l-28.06,28.06c-1.83,1.83-4.79,1.83-6.62,0-1.83-1.83-1.83-4.79,0-6.62l24.76-24.76L1.38,7.99C-.44,6.17-.44,3.2,1.38,1.37,3.21-.46,6.18-.46,8,1.37l28.06,28.06h-.01Z' fill='%23fff' stroke-width='0'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+#social-tuakiri {
+	background-color: #fff;
+  -webkit-box-shadow: inset 0 0 0 1px #f8b20e;
+  box-shadow: inset 0 0 0 1px #f8b20e;
+  color: #16161d;
+}
+#social-tuakiri:hover {
+	-webkit-box-shadow: inset 0 0 0 1px #8e489b;
+  box-shadow: inset 0 0 0 1px #8e489b;
+}
+#social-tuakiri:hover:after {
+  content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 37.43 65.51'%3E%3Cg%3E%3Cpath d='m36.06,29.45c1.83,1.83,1.83,4.79,0,6.62l-28.06,28.06c-1.83,1.83-4.79,1.83-6.62,0-1.83-1.83-1.83-4.79,0-6.62l24.76-24.76L1.38,7.99C-.44,6.17-.44,3.2,1.38,1.37,3.21-.46,6.18-.46,8,1.37l28.06,28.06h-.01Z' fill='%2316161d' stroke-width='0'/%3E%3C/g%3E%3C/svg%3E");
+}

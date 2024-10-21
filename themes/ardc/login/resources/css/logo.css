@@ -23,11 +23,13 @@
 
 div#kc-header-wrapper {
     color: transparent; /* Hide text label */
-    background-image: url(../img/nectar-logo.svg);
-    background-repeat: no-repeat;
-    height: 142px;
-    width: 358px;
-    margin: 0 auto;
+    text-align: center;
+    padding: 40px !important;
+}
+
+div#kc-header-wrapper img {
+    width: 100%;
+    max-width: 320px;
 }
 
 /* AAF f2862a */

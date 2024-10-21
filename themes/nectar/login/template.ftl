@@ -39,10 +39,8 @@
 <body class="${properties.kcBodyClass!}">
 <div class="${properties.kcLoginClass!}">
     <div id="kc-header" class="${properties.kcHeaderClass!}">
-        <div id="kc-header-wrapper" class="${properties.kcHeaderWrapperClass!}">
-            <img src="${url.resourcesPath}/img/ardc-logo.svg" alt="Australian Research Data Commons" width="320" height="105" />
-            ${kcSanitize(msg("loginTitleHtml",(realm.displayNameHtml!'')))?no_esc}
-        </div>
+        <div id="kc-header-wrapper"
+             class="${properties.kcHeaderWrapperClass!}">${kcSanitize(msg("loginTitleHtml",(realm.displayNameHtml!'')))?no_esc}</div>
     </div>
     <div class="${properties.kcFormCardClass!}">
         <header class="${properties.kcFormHeaderClass!}">
@@ -151,155 +149,73 @@
 
   </div>
 
+  <footer class="footer">
+    <div class="nectar-container">
 
-    <!-- ARDC footer -->
-    <footer id="ardc-footer" role="contentinfo">
-        <div class="footer-row">
-            <div class="nectar-container">
-                <div class="row">
-                    <div class="mb-2 col-12 col-md-6 col-lg-4 footer-logos">
-                        <a href="https://www.education.gov.au/ncris">
-                            <img id="ncris-logo" src="https://object-store.rc.nectar.org.au/v1/AUTH_2f6f7e75fc0f453d9c127b490b02e9e3/web_images/ncris-provider.svg" width="176" height="127" alt="National Collaborative Research Infrastructure Strategy">
-                        </a>
-                        <p class="footer-image-description">The Australian Research Data Commons is enabled by NCRIS.</p>
-                    </div>
-                    <div class="mb-2 col-12 col-md-6 col-lg-4">
-                        <!-- ARDC newsletter sign up form -->
-                        <div id="mc_embed_shell">
-                            <div id="mc_embed_signup">
-                            <form action="https://ardc.us7.list-manage.com/subscribe/post?u=b542ef52e49302569068046d9&amp;id=22b849a4ee&amp;f_id=00e7c2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate="">
-                            <div id="mc_embed_signup_scroll">
-                                <h2>ARDC NEWSLETTER SIGNUP</h2>
-                                <div class="ardc-custom--fields-grid-wrapper">
-                                <div class="mc-field-group">
-                                    <label for="mce-FNAME" class="screen-reader-text">First Name </label>
-                                    <input type="text" name="FNAME" class="fname" id="mce-FNAME" value="" placeholder="First Name">
-                                    <div id="fname-error" class="error-message">This field is required.</div>
-                                </div>
-                                <div class="mc-field-group">
-                                    <label for="mce-LNAME" class="screen-reader-text">Last Name </label>
-                                    <input type="text" name="LNAME" class="lname" id="mce-LNAME" value="" placeholder="Last Name">
-                                    <div id="lname-error" class="error-message">This field is required.</div>
-                                </div>
-                                <div class="mc-field-group">
-                                    <label for="mce-EMAIL" class="screen-reader-text">Email Address <span class="asterisk">*</span>
-                                    </label>
-                                    <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="" placeholder="Email">
-                                    <div id="email-error" class="error-message">This field is required.</div>
-                                </div>
-                                <div class="mc-field-group">
-                                    <label for="mce-group[20]" class="screen-reader-text">I am</label>
-                                    <select name="group[20]" id="mce-group[20]">
-                                    <option value="512">A Researcher</option>
-                                    <option value="1024">A Research Support Professional - OR Research Data / Software and Infrastructure Professional</option>
-                                    <option value="2048">Librarian / Trainer</option>
-                                    <option value="4096">A Manager of People and/or Policy</option>
-                                    </select>
-                                </div>
-                                </div>
-
-                                <div>
-                                <input type="hidden" name="tags" value="791380">
-                                </div>
-                                <div class="screen-reader-text" aria-hidden="true" style="position: absolute;left: -5000px;">
-                                <input type="text" name="b_b542ef52e49302569068046d9_22b849a4ee" tabindex="-1" value="">
-                                </div>
-                                <div class="clear">
-                                <button id="signup-modal-trigger" data-target="#mc-signup-modal" type="button" class="button">Subscribe</button>
-                                </div>
-                            </div>
-
-                            <div id="mc-signup-modal">
-                                <div class="mc-field-group input-group">
-                                <p>
-                                    <strong>Confirm what you are interested in:</strong>
-                                    <span style="color: #c02b0a;font-size: 13px;"><em>(Required)</em></span>
-                                    <button type="button" class="close-modal js-close-modal">x</button>
-                                </p>
-                                <ul>
-                                    <li>
-                                    <input type="checkbox" name="group[24][1]" id="mce-group[24]-24-0" value="">
-                                    <label for="mce-group[24]-24-0">All</label>
-                                    </li>
-                                    <li>
-                                    <input type="checkbox" name="group[24][65536]" id="mce-group[24]-24-1" value="">
-                                    <label for="mce-group[24]-24-1">Biological and Biotechnological Sciences</label>
-                                    </li>
-                                    <li>
-                                    <input type="checkbox" name="group[24][16]" id="mce-group[24]-24-2" value="">
-                                    <label for="mce-group[24]-24-2">Engineering</label>
-                                    </li>
-                                    <li>
-                                    <input type="checkbox" name="group[24][8192]" id="mce-group[24]-24-3" value="">
-                                    <label for="mce-group[24]-24-3">Environmental and Agricultural Sciences</label>
-                                    </li>
-                                    <li>
-                                    <input type="checkbox" name="group[24][16384]" id="mce-group[24]-24-4" value="">
-                                    <label for="mce-group[24]-24-4">Humanities Arts and Social Sciences (HASS)</label>
-                                    </li>
-                                    <li>
-                                    <input type="checkbox" name="group[24][262144]" id="mce-group[24]-24-5" value="">
-                                    <label for="mce-group[24]-24-5">Indigenous Studies</label>
-                                    </li>
-                                    <li>
-                                    <input type="checkbox" name="group[24][524288]" id="mce-group[24]-24-6" value="">
-                                    <label for="mce-group[24]-24-6">Mathematical-Information and Computing Sciences</label>
-                                    </li>
-                                    <li>
-                                    <input type="checkbox" name="group[24][32768]" id="mce-group[24]-24-7" value="">
-                                    <label for="mce-group[24]-24-7">Medical and Health Sciences</label>
-                                    </li>
-                                    <li>
-                                    <input type="checkbox" name="group[24][131072]" id="mce-group[24]-24-8" value="">
-                                    <label for="mce-group[24]-24-8">Physical-Chemical and Earth Sciences</label>
-                                    </li>
-                                </ul>
-                                <div class="error-message" aria-hidden="true">This field is required!</div>
-                                <div>
-                                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Confirm">
-                                </div>
-                                </div>
-                            </div>
-
-                            </form>
-                            </div>
-
-                            <script src="https://static.freshdev.io/fdk/2.0/assets/fresh_parent.js"></script><script>
-                            const embedShell=document.getElementById("mc_embed_shell"),modalBtn=embedShell.querySelector("#signup-modal-trigger"),signupForm=embedShell.querySelector("#mc-embedded-subscribe-form"),fnameField=embedShell.querySelector(".fname"),lnameField=embedShell.querySelector(".lname"),emailField=embedShell.querySelector(".email");function anyCheckboxIsChecked(e){let l=!1;for(let t of e)if(t.checked){l=!0;break}return l}function closeModalHandler(e,l){e.addEventListener("click",e=>{l.classList.remove("active")})}function submitModalHandler(e,l,t,a){e.addEventListener("click",e=>{e.preventDefault(),anyCheckboxIsChecked(l)?t.submit():a.classList.add("error")})}modalBtn.addEventListener("click",e=>{let l=embedShell.querySelector(e.target.dataset.target),t=l.querySelector('input[type="submit"]'),a=""==fnameField.value||""==lnameField.value||""==emailField.value;if(l&&!a){let d=l.querySelectorAll('input[type="checkbox"]'),r=l.querySelector(".js-close-modal");closeModalHandler(r,l),l.classList.add("active"),submitModalHandler(t,d,signupForm,l)}else document.getElementById("fname-error").style.display=""==fnameField.value?"block":"none",document.getElementById("lname-error").style.display=""==lnameField.value?"block":"none",document.getElementById("email-error").style.display=""==emailField.value?"block":"none"});
-                            </script>
-
-                        </div>
-                    </div>
-                    <div class="mb-2 col-12 col-md-12 col-lg-4 footer-links">
-                        <h4 class="footer-heading">Quick Links</h4>
-                        <ul class="footer-list list-bullet">
-                            <li><a href="https://ardc.edu.au/privacy-policy/" target="_blank" title="Privacy Policy">Privacy Policy</a></li>
-                            <li><a href="https://support.ehelp.edu.au/" title="Nectar Support Home">ARDC Nectar Support</a></li>
-                            <li><a href="https://ardc.edu.au/" target="_blank" title="ARDC Website">ARDC Website</a></li>
-                            <li><a href="https://ardc.edu.au/contact-us/" target="_blank" title="Contact ARDC">Contact ARDC</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+      <div class="row h-100">
+        <div class="col-xs-8 footer-text">
+          <small>The Nectar Research Cloud is a service of the Australian Research Data Commons (ARDC).
+             The Australian Research Data Commons (ARDC) is enabled by the National Collaborative Research Infrastructure Strategy Program (NCRIS).
+             <a href="https://ardc.edu.au/about/" target="_blank">Read more about the ARDC...</a>
+          </small>
         </div>
-        <div class="footer-row bg-light">
-            <div class="nectar-container">
-                <div class="row footer-acknowledgement">
-                    <p>We acknowledge and celebrate the First Australians on whose traditional lands we live and work, and we pay our respects to Elders past, present and emerging.</p>
-                </div>
+
+        <div class="col-xs-4">
+          <div class="row vertical-align">
+            <div class="col-md-7">
+                <a href="https://www.ardc.edu.au/" target="_blank">
+                  <img src="${url.resourcesPath}/img/ardc_logo_rev.svg" style="zwidth: 200px;" class="img-responsive" alt="Australian Research Data Commons (ARDC)"/>
+                </a>
             </div>
-        </div>
-        <div class="footer-row">
-            <div class="nectar-container">
-                <div class="footer-copyright d-flex flex-wrap align-items-center">
-                    <span class="copyright">Copyright © <script type="text/javascript">document.write( new Date().getFullYear() );</script>2024 ARDC. <a href="https://www.acnc.gov.au/charity/charities/eca273f3-f5be-e911-a98a-000d3ad02a61/profile" target="_blank" rel="noopener noreferrer">ACN 633 798 857</a></span>
-                    <a href="https://ardc.edu.au/terms-and-conditions/" target="_blank" class="footer-link" rel="noopener noreferrer"><span class="disclaimer">Terms and Conditions</span></a>
-                    <a href="https://ardc.edu.au/privacy-policy/" target="_blank" class="footer-link" rel="noopener noreferrer"><span class="privacy">Privacy Policy</span></a>
-                    <a href="https://ardc.edu.au/accessibility-statement-for-ardc/" target="_blank" class="footer-link" rel="noopener noreferrer"><span class="accessibility">Accessibility Statement</span></a>
-                </div>
+            <div class="col-md-5">
+                <a href="https://education.gov.au/national-collaborative-research-infrastructure-strategy-ncris" target="_blank">
+                  <img src="${url.resourcesPath}/img/ncris_mono_rev.svg" style="zwidth: 100px;" class="img-responsive" alt="National Collaborative Research Infrastructure Strategy (NCRIS)" />
+                </a>
             </div>
+          </div>
         </div>
-    </footer>
+      </div> <!-- row -->
+    
+      <div class="row h-100 footer-links">
+        <div class="col-sm-3 col-xs-6">
+          <h3>Quicklinks</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/terms">Terms and Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-3 col-xs-6">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="https://support.ehelp.edu.au/support/solutions/folders/6000190150">Cloud Basics</a></li>
+            <li><a href="https://support.ehelp.edu.au/support/solutions/folders/6000232361">Cloud Services</a></li>
+            <li><a href="https://support.ehelp.edu.au/support/solutions/folders/6000230414">Cloud Applications</a></li>
+            <li><a href="https://support.ehelp.edu.au/support/solutions/folders/6000190155">Cloud Fundamentals</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-3 col-xs-6">
+          <h3>Help</h3>
+          <ul>
+            <li><a href="https://support.ehelp.edu.au/support/tickets/new" target="_blank">Request Support</a></li>
+            <li><a href="https://tutorials.rc.nectar.org.au">Tutorials</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-3 col-xs-6">
+          <h3>External Resources</h3>
+          <ul>
+            <li><a href="https://ardc.edu.au/">ARDC Home</a></li>
+            <li><a href="https://dashboard.rc.nectar.org.au/">Nectar Dashboard</a></li>
+            <li><a href="https://ardc.edu.au/services/">ARDC Online Services</a></li>
+          </ul>
+        </div>
+      </div> <!-- row -->
+
+    </div> <!-- nectar-container -->
+  </footer>
+
 </body>
 </html>
 </#macro>

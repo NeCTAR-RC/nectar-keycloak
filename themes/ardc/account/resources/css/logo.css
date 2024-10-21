@@ -15,19 +15,7 @@
  * limitations under the License.
  */
 
-.login-pf body {
-/*    background: url("../img/keycloak-bg.png") no-repeat center center fixed;
-    background-size: cover;
-    height: 100%; */
-}
-
-div#kc-header-wrapper {
-    color: transparent; /* Hide text label */
+.navbar-title {
     background-image: url(../img/nectar-logo.svg);
-    background-repeat: no-repeat;
-    height: 142px;
-    width: 358px;
-    margin: 0 auto;
+    background-size: 160px 60px;
 }
-
-/* AAF f2862a */
