@@ -12,8 +12,8 @@ COPY providers/nectar-scripts.jar /opt/keycloak/providers/nectar-scripts.jar
 # Install any other custom providers
 #COPY providers/*.jar /opt/keycloak/providers/
 
-# Add Nectar theme
-ADD ./themes/nectar /opt/keycloak/themes/nectar/
+# Add themes
+ADD ./themes /opt/keycloak/themes
 
 # Add our JDBC ping config, and remove old config
 COPY ./cache-ispn.xml /opt/keycloak/conf/cache-ispn.xml
