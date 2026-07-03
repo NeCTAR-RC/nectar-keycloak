@@ -1,5 +1,5 @@
 ### Build stage
-FROM quay.io/keycloak/keycloak:26.2.5 AS builder
+FROM quay.io/keycloak/keycloak:26.6.4 AS builder
 
 ENV KC_FEATURES=scripts
 ENV KC_TRANSACTION_XA_ENABLED=false
@@ -23,7 +23,7 @@ RUN /opt/keycloak/bin/kc.sh build && \
     /opt/keycloak/bin/kc.sh show-config
 
 ### Run stage
-FROM quay.io/keycloak/keycloak:26.2.5
+FROM quay.io/keycloak/keycloak:26.6.4
 COPY --from=builder /opt/keycloak/ /opt/keycloak/
 
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
