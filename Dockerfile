@@ -26,4 +26,10 @@ RUN /opt/keycloak/bin/kc.sh build && \
 FROM quay.io/keycloak/keycloak:26.8.2
 COPY --from=builder /opt/keycloak/ /opt/keycloak/
 
+# Mitigation for CVE-2026-114938: limit the JVM to AVX2.
+# Remove once the ubi9 java-21-openjdk package in the base image is at
+# least 21.0.13.1 (26.8.2 ships 21.0.13.0.9-1). Check with:
+#   docker run --rm --entrypoint java <image> -version
+ENV JAVA_OPTS_APPEND="-XX:UseAVX=2"
+
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
